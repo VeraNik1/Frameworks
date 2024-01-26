@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+    <title>Форма ввода числа</title>
+</head>
+<body>
+    <h1>Введите число</h1>
+    <form method="POST" action="{{ url_for('input_num') }}">
+        <label for="number">Число:</label>
+        <input type="number" id="number" name="number"><br><br>
+            <input type="submit" value="Отправить">
+    </form>
+</body>
+</html>
