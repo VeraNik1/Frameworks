@@ -1,0 +1,31 @@
+[{
+    "id": 1,
+    "title": "movie1",
+    "description": "govno",
+    "genre": "soapy"
+},
+    {
+    "id": 2,
+    "title": "movie2",
+    "description": "norm",
+    "genre": "thriller"
+},
+    {
+    "id": 3,
+    "title": "movie3",
+    "description": "holyshit",
+    "genre": "scary"
+},
+    {
+    "id": 4,
+    "title": "movie4",
+    "description": "wannadie",
+    "genre": "drama"
+},
+    {
+    "id": 5,
+    "title": "movie5",
+    "description": "omnom",
+    "genre": "porn"
+}
+]
