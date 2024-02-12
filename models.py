@@ -24,6 +24,7 @@ class UserIn(BaseModel):
         if not re.match(email_regex, value):
             raise ValueError("Invalid email address")
         return value
+        
 class User(UserIn):
     id: int = Field(default=0, ge=0)
 
@@ -41,7 +42,6 @@ class OrderIn(BaseModel):
     product_id: int = Field(..., ge=0)
     date: datetime = Field(default_factory=datetime.now)
     status: str = Field(default=Status.created, max_length=16)
-
 
 class Order(OrderIn):
     id: int = Field(..., ge=0)
