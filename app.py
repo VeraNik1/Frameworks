@@ -144,6 +144,7 @@ async def update_order(order_id: int, new_order: OrderIn):
     query = orders.update().where(orders.c.id == order_id).values(**new_order.model_dump())
     await database.execute(query)
     return {**new_order.model_dump(), "id": order_id}
+    
 #--------------------------------------------------------------------------------------------------------
 # CRUD операции для таблицы "Удаление"
 #--------------------------------------------------------------------------------------------------------
@@ -172,6 +173,7 @@ async def delete_product(product_id: int):
                 raise HTTPException(status_code=status.HTTP_409_CONFLICT, detail=f"This product included in Orders, delete Orders first")
     await database.execute(products.delete().where(products.c.id == product_id))
     return {"message": "Product deleted"}
+    
 # Удалить заказ из БД(по id)
 @app.delete("/order/{order_id}")
 async def delete_order(order_id: int):
